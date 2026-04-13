@@ -36,10 +36,10 @@ async def handle_list_tools() -> list[Tool]:
 async def handle_call_tool(name: str, arguments: Any | None) -> list[types.TextContent | types.ImageContent | types.EmbeddedResource]:
     args = arguments or {}
     if name == "add_content":
-            _store.setdefault("posts", []).append(args)
-            return [TextContent(type="text", text=json.dumps({"status": "scheduled"}, indent=2))]
-        if name == "get_calendar":
-            return [TextContent(type="text", text=json.dumps({"posts": _store.get("posts", [])}, indent=2))]
+        _store.setdefault("posts", []).append(args)
+        return [TextContent(type="text", text=json.dumps({"status": "scheduled"}, indent=2))]
+    if name == "get_calendar":
+        return [TextContent(type="text", text=json.dumps({"posts": _store.get("posts", [])}, indent=2))]
     return [TextContent(type="text", text=json.dumps({"error": "Unknown tool"}, indent=2))]
 
 async def main():
