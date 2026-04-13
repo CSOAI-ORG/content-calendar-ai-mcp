@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""MEOK AI Labs — content-calendar-ai-mcp MCP Server. Plan and schedule social media and blog content."""
+
+import asyncio
+import json
+from datetime import datetime
+from typing import Any
+
+from mcp.server.models import InitializationOptions
+from mcp.server import NotificationOptions, Server
+from mcp.server.stdio import stdio_server
+from mcp.types import (
+    Resource,
+    Tool,
+    TextContent,
+)
+import mcp.types as types
+
+# In-memory store (replace with DB in production)
+_store = {}
+
+server = Server("content-calendar-ai-mcp")
+
+@server.list_resources()
+async def handle_list_resources() -> list[Resource]:
+    return []
+
+@server.list_tools()
+async def handle_list_tools() -> list[Tool]:
+    return [
+        Tool(name="add_content", description="Add content to calendar", inputSchema={"type":"object","properties":{"title":{"type":"string"},"date":{"type":"string"},"channel":{"type":"string"}},"required":["title","date"]}),
+        Tool(name="get_calendar", description="Get content calendar", inputSchema={"type":"object","properties":{}}),
+    ]
+
+@server.call_tool()
+async def handle_call_tool(name: str, arguments: Any | None) -> list[types.TextContent | types.ImageContent | types.EmbeddedResource]:
+    args = arguments or {}
+    if name == "add_content":
+            _store.setdefault("posts", []).append(args)
+            return [TextContent(type="text", text=json.dumps({"status": "scheduled"}, indent=2))]
+        if name == "get_calendar":
+            return [TextContent(type="text", text=json.dumps({"posts": _store.get("posts", [])}, indent=2))]
+    return [TextContent(type="text", text=json.dumps({"error": "Unknown tool"}, indent=2))]
+
+async def main():
+    async with stdio_server(server._read_stream, server._write_stream) as (read_stream, write_stream):
+        await server.run(
+            read_stream,
+            write_stream,
+            InitializationOptions(
+                server_name="content-calendar-ai-mcp",
+                server_version="0.1.0",
+                capabilities=server.get_capabilities(
+                    notification_options=NotificationOptions(),
+                    experimental_capabilities={},
+                ),
+            ),
+        )
+
+if __name__ == "__main__":
+    asyncio.run(main())
