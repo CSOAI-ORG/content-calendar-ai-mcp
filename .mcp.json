@@ -1,21 +1,6 @@
 {
   "name": "content-calendar-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Content Calendar tools for AI agents and LLMs",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/content-calendar-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
-  "tools": [
-    "add_content",
-    "get_calendar"
-  ],
-  "categories": [
-    "Productivity",
-    "Calendar"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+  "description": "Content Calendar Ai Mcp \u2014 Plan and schedule social media and blog content.",
+  "version": "1.0.0",
+  "tools": []
 }
