@@ -1,0 +1,78 @@
+{
+  "name": "content-calendar-ai",
+  "description": "Content planning, scheduling, and calendar management.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/content-calendar-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "schedule_content",
+      "description": "Schedule content for publishing"
+    },
+    {
+      "name": "get_calendar",
+      "description": "Get content calendar"
+    },
+    {
+      "name": "get_upcoming",
+      "description": "Get upcoming content"
+    },
+    {
+      "name": "update_content",
+      "description": "Update scheduled content"
+    },
+    {
+      "name": "delete_content",
+      "description": "Delete scheduled content"
+    },
+    {
+      "name": "create_campaign",
+      "description": "Create content campaign"
+    },
+    {
+      "name": "add_to_campaign",
+      "description": "Add content to campaign"
+    },
+    {
+      "name": "get_campaign_content",
+      "description": "Get all content in campaign"
+    },
+    {
+      "name": "get_platform_schedule",
+      "description": "Get schedule overview by platform"
+    },
+    {
+      "name": "get_content_stats",
+      "description": "Get content statistics"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Content & Media",
+    "Productivity"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
