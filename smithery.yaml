@@ -1,34 +1,103 @@
 name: content-calendar-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Content planning, scheduling, and calendar management.
 version: 1.0.0
 tools:
 - name: schedule_content
   description: Schedule content for publishing
-  parameters: []
+  parameters:
+  - name: title
+    type: string
+    required: true
+  - name: content
+    type: string
+    required: true
+  - name: platform
+    type: string
+    required: true
+  - name: content_type
+    type: string
+    required: false
+  - name: publish_date
+    type: string
+    required: false
+  - name: status
+    type: string
+    required: false
 - name: get_calendar
   description: Get content calendar
-  parameters: []
+  parameters:
+  - name: start_date
+    type: string
+    required: false
+  - name: end_date
+    type: string
+    required: false
+  - name: platform
+    type: string
+    required: false
 - name: get_upcoming
   description: Get upcoming content
-  parameters: []
+  parameters:
+  - name: days
+    type: integer
+    required: false
+  - name: platform
+    type: string
+    required: false
 - name: update_content
   description: Update scheduled content
-  parameters: []
+  parameters:
+  - name: content_id
+    type: string
+    required: true
+  - name: updates
+    type: object
+    required: false
 - name: delete_content
   description: Delete scheduled content
-  parameters: []
+  parameters:
+  - name: content_id
+    type: string
+    required: true
 - name: create_campaign
   description: Create content campaign
-  parameters: []
+  parameters:
+  - name: name
+    type: string
+    required: true
+  - name: goal
+    type: string
+    required: false
+  - name: start_date
+    type: string
+    required: false
+  - name: end_date
+    type: string
+    required: false
 - name: add_to_campaign
   description: Add content to campaign
-  parameters: []
+  parameters:
+  - name: content_id
+    type: string
+    required: true
+  - name: campaign_id
+    type: string
+    required: true
 - name: get_campaign_content
   description: Get all content in campaign
-  parameters: []
+  parameters:
+  - name: campaign_id
+    type: string
+    required: true
 - name: get_platform_schedule
   description: Get schedule overview by platform
-  parameters: []
+  parameters:
+  - name: platforms
+    type: array
+    required: false
 - name: get_content_stats
   description: Get content statistics
-  parameters: []
+  parameters:
+  - name: days
+    type: integer
+    required: false

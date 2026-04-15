@@ -1,6 +1,6 @@
 {
   "name": "content-calendar-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Content planning, scheduling, and calendar management.",
   "version": "1.0.0",
   "tools": [
     {
@@ -8,8 +8,31 @@
       "description": "Schedule content for publishing",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "content_type": {
+            "type": "string"
+          },
+          "publish_date": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "content",
+          "platform"
+        ]
       }
     },
     {
@@ -17,7 +40,17 @@
       "description": "Get content calendar",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string"
+          }
+        },
         "required": []
       }
     },
@@ -26,7 +59,14 @@
       "description": "Get upcoming content",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "days": {
+            "type": "integer"
+          },
+          "platform": {
+            "type": "string"
+          }
+        },
         "required": []
       }
     },
@@ -35,8 +75,17 @@
       "description": "Update scheduled content",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "content_id": {
+            "type": "string"
+          },
+          "updates": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "content_id"
+        ]
       }
     },
     {
@@ -44,8 +93,14 @@
       "description": "Delete scheduled content",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "content_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "content_id"
+        ]
       }
     },
     {
@@ -53,8 +108,23 @@
       "description": "Create content campaign",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "goal": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
       }
     },
     {
@@ -62,8 +132,18 @@
       "description": "Add content to campaign",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "content_id": {
+            "type": "string"
+          },
+          "campaign_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "content_id",
+          "campaign_id"
+        ]
       }
     },
     {
@@ -71,8 +151,14 @@
       "description": "Get all content in campaign",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "campaign_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "campaign_id"
+        ]
       }
     },
     {
@@ -80,7 +166,11 @@
       "description": "Get schedule overview by platform",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "platforms": {
+            "type": "array"
+          }
+        },
         "required": []
       }
     },
@@ -89,7 +179,11 @@
       "description": "Get content statistics",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "days": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     }
