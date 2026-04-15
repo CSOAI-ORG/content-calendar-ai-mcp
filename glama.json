@@ -1,0 +1,10 @@
+{
+  "name": "content-calendar-ai-mcp",
+  "description": "MEOK AI Labs \u2014 content-calendar-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/content-calendar-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
