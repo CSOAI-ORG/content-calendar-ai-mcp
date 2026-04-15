@@ -1,5 +1,6 @@
 name: content-calendar-ai-mcp
-description: Content planning, scheduling, and calendar management.
+description: Content Calendar Ai automation via MCP. Includes schedule content, get
+  calendar, get upcoming. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: schedule_content
