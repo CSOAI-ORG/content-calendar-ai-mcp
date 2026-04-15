@@ -28,7 +28,7 @@ def _rl(c="anon"):
 
 
 _store = {"content": [], "calendar": {}, "campaigns": []}
-server = Server("content-calendar-ai-mcp")
+server = Server("content-calendar-ai")
 
 
 def create_id():
@@ -443,7 +443,7 @@ async def main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="content-calendar-ai-mcp",
+                server_name="content-calendar-ai",
                 server_version="0.1.0",
                 capabilities=server.get_capabilities(
                     notification_options=NotificationOptions(),

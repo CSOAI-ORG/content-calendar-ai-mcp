@@ -1,4 +1,34 @@
 name: content-calendar-ai-mcp
 description: MEOK AI Labs MCP Server
 version: 1.0.0
-tools: []
+tools:
+- name: schedule_content
+  description: Schedule content for publishing
+  parameters: []
+- name: get_calendar
+  description: Get content calendar
+  parameters: []
+- name: get_upcoming
+  description: Get upcoming content
+  parameters: []
+- name: update_content
+  description: Update scheduled content
+  parameters: []
+- name: delete_content
+  description: Delete scheduled content
+  parameters: []
+- name: create_campaign
+  description: Create content campaign
+  parameters: []
+- name: add_to_campaign
+  description: Add content to campaign
+  parameters: []
+- name: get_campaign_content
+  description: Get all content in campaign
+  parameters: []
+- name: get_platform_schedule
+  description: Get schedule overview by platform
+  parameters: []
+- name: get_content_stats
+  description: Get content statistics
+  parameters: []
