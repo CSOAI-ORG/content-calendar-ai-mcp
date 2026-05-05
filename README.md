@@ -1,98 +1,38 @@
-# Content Calendar AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Content planning, scheduling, and calendar management across platforms
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/content-calendar-ai-mcp)](https://github.com/CSOAI-ORG/content-calendar-ai-mcp/stargazers)
+
+# ucontentU calendarU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/content-calendar-ai-mcp)](https://www.npmjs.com/package/@meok-ai/content-calendar-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/content-calendar-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install content-calendar-ai-mcp
+# or
+npm install -g @meok-ai/content-calendar-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `schedule_content`
-Schedule content for publishing on a platform.
-
-**Parameters:**
-- `title` (str): Content title
-- `content` (str): Content body
-- `platform` (str): Target platform (linkedin, twitter, instagram, facebook, youtube, tiktok, blog, newsletter)
-- `content_type` (str): Content type (post, article, video, infographic, thread, poll, announcement)
-- `publish_date` (str): Publish date
-- `status` (str): Status (default 'draft')
-
-### `get_calendar`
-Get content calendar for a date range with optional platform filter.
-
-**Parameters:**
-- `start_date` (str): Start date
-- `end_date` (str): End date
-- `platform` (str): Platform filter
-
-### `get_upcoming`
-Get upcoming content for the next N days.
-
-**Parameters:**
-- `days` (int): Days ahead (default 7)
-- `platform` (str): Platform filter
-
-### `update_content`
-Update scheduled content.
-
-**Parameters:**
-- `content_id` (str): Content identifier
-- `updates` (dict): Fields to update
-
-### `delete_content`
-Delete scheduled content.
-
-**Parameters:**
-- `content_id` (str): Content identifier
-
-### `create_campaign`
-Create a content campaign with goals and timeline.
-
-**Parameters:**
-- `name` (str): Campaign name
-- `goal` (str): Campaign goal
-- `start_date` (str): Start date
-- `end_date` (str): End date
-
-### `add_to_campaign`
-Add content to a campaign.
-
-**Parameters:**
-- `content_id` (str): Content identifier
-- `campaign_id` (str): Campaign identifier
-
-### `get_campaign_content`
-Get all content in a campaign.
-
-**Parameters:**
-- `campaign_id` (str): Campaign identifier
-
-### `get_platform_schedule`
-Get schedule overview by platform.
-
-**Parameters:**
-- `platforms` (list): Platforms to include
-
-### `get_content_stats`
-Get content statistics for a period.
-
-**Parameters:**
-- `days` (int): Period in days (default 30)
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
