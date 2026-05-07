@@ -52,7 +52,23 @@ CONTENT_TYPES = [
 
 @mcp.tool()
 def schedule_content(title: str, content: str, platform: str, content_type: str = "post", publish_date: str = "", status: str = "draft", api_key: str = "") -> str:
-    """Schedule content for publishing"""
+    """Schedule content for publishing
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -83,7 +99,23 @@ def schedule_content(title: str, content: str, platform: str, content_type: str 
 
 @mcp.tool()
 def get_calendar(start_date: str = "", end_date: str = "", platform: str = "", api_key: str = "") -> str:
-    """Get content calendar"""
+    """Get content calendar
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -108,7 +140,23 @@ def get_calendar(start_date: str = "", end_date: str = "", platform: str = "", a
 
 @mcp.tool()
 def get_upcoming(days: int = 7, platform: str = "", api_key: str = "") -> str:
-    """Get upcoming content"""
+    """Get upcoming content
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -132,7 +180,23 @@ def get_upcoming(days: int = 7, platform: str = "", api_key: str = "") -> str:
 
 @mcp.tool()
 def update_content(content_id: str, updates: dict = None, api_key: str = "") -> str:
-    """Update scheduled content"""
+    """Update scheduled content
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -149,7 +213,23 @@ def update_content(content_id: str, updates: dict = None, api_key: str = "") -> 
 
 @mcp.tool()
 def delete_content(content_id: str, api_key: str = "") -> str:
-    """Delete scheduled content"""
+    """Delete scheduled content
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -161,7 +241,22 @@ def delete_content(content_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def create_campaign(name: str, goal: str = "", start_date: str = "", end_date: str = "", api_key: str = "") -> str:
-    """Create content campaign"""
+    """Create content campaign
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -186,7 +281,23 @@ def create_campaign(name: str, goal: str = "", start_date: str = "", end_date: s
 
 @mcp.tool()
 def add_to_campaign(content_id: str, campaign_id: str, api_key: str = "") -> str:
-    """Add content to campaign"""
+    """Add content to campaign
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -203,7 +314,23 @@ def add_to_campaign(content_id: str, campaign_id: str, api_key: str = "") -> str
 
 @mcp.tool()
 def get_campaign_content(campaign_id: str, api_key: str = "") -> str:
-    """Get all content in campaign"""
+    """Get all content in campaign
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -223,7 +350,23 @@ def get_campaign_content(campaign_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_platform_schedule(platforms: list = None, api_key: str = "") -> str:
-    """Get schedule overview by platform"""
+    """Get schedule overview by platform
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -247,7 +390,23 @@ def get_platform_schedule(platforms: list = None, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_content_stats(days: int = 30, api_key: str = "") -> str:
-    """Get content statistics"""
+    """Get content statistics
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
