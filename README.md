@@ -1,45 +1,64 @@
-[![content-calendar-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/content-calendar-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/content-calendar-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/content-calendar-ai-mcp)](https://pypi.org/project/content-calendar-ai-mcp/)
-
-[![content-calendar-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/content-calendar-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/content-calendar-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/content-calendar-ai-mcp)](https://github.com/CSOAI-ORG/content-calendar-ai-mcp/stargazers)
+# Content Calendar Ai MCP
 
-# ucontentU calendarU aiU mcp
+**MCP server for content calendar ai mcp operations**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/content-calendar-ai-mcp)](https://www.npmjs.com/package/@meok-ai/content-calendar-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-content-calendar-ai-mcp)](https://pypi.org/project/meok-content-calendar-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/content-calendar-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Content Calendar Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `schedule_content` | Schedule content for publishing |
+| `get_calendar` | Get content calendar |
+| `get_upcoming` | Get upcoming content |
+| `update_content` | Update scheduled content |
+| `delete_content` | Delete scheduled content |
+| `create_campaign` | Create content campaign |
+| `add_to_campaign` | Add content to campaign |
+| `get_campaign_content` | Get all content in campaign |
+| `get_platform_schedule` | Get schedule overview by platform |
+| `get_content_stats` | Get content statistics |
 
 ## Installation
 
 ```bash
-pip install content-calendar-ai-mcp
-# or
-npm install -g @meok-ai/content-calendar-ai-mcp
+pip install meok-content-calendar-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "content-calendar-ai": {
+      "command": "python",
+      "args": ["-m", "meok_content_calendar_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 10 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/content-calendar-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
