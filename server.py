@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — content-calendar-ai-mcp MCP Server. Content planning, scheduling, and calendar management."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+MEOK AI Labs — content-calendar-ai-mcp MCP Server. Content planning, scheduling, and calendar management."""
 
 import json
 from datetime import datetime, timedelta, timezone
@@ -7,7 +9,6 @@ from typing import Any
 import uuid
 import sys, os
 
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 from mcp.server.fastmcp import FastMCP
 from collections import defaultdict
@@ -95,7 +96,7 @@ def schedule_content(title: str, content: str, platform: str, content_type: str 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     item = {
@@ -163,7 +164,7 @@ def get_calendar(start_date: str = "", end_date: str = "", platform: str = "", a
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     start = start_date or datetime.now().strftime("%Y-%m-%d")
@@ -224,7 +225,7 @@ def get_upcoming(days: int = 7, platform: str = "", api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     cutoff = (datetime.now() + timedelta(days=days)).strftime("%Y-%m-%d")
@@ -284,7 +285,7 @@ def update_content(content_id: str, updates: dict = None, api_key: str = "") -> 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     for c in _store["content"]:
@@ -336,7 +337,7 @@ def delete_content(content_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     _store["content"] = [c for c in _store["content"] if c["id"] != content_id]
@@ -385,7 +386,7 @@ def create_campaign(name: str, goal: str = "", start_date: str = "", end_date: s
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     campaign = {
@@ -446,7 +447,7 @@ def add_to_campaign(content_id: str, campaign_id: str, api_key: str = "") -> str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     for camp in _store["campaigns"]:
@@ -498,7 +499,7 @@ def get_campaign_content(campaign_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     camp = next((c for c in _store["campaigns"] if c["id"] == campaign_id), None)
@@ -553,7 +554,7 @@ def get_platform_schedule(platforms: list = None, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     platforms_list = platforms or PLATFORMS
@@ -612,7 +613,7 @@ def get_content_stats(days: int = 30, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     cutoff = datetime.now() - timedelta(days=days)
@@ -650,5 +651,8 @@ def get_content_stats(days: int = 30, api_key: str = "") -> str:
     )
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
