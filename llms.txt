@@ -1,37 +1,51 @@
-# Content Calendar Ai MCP
-
-> Content planning, scheduling, and calendar management
-
-`content-calendar-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# content-calendar-ai-mcp
+# **MCP server for content calendar ai mcp operations**
 
 ## Install
-
 ```bash
 pip install content-calendar-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx content-calendar-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `schedule_content` — Schedule content for publishing
-- `get_calendar` — Get content calendar
-- `get_upcoming` — Get upcoming content
-- `update_content` — Update scheduled content
-- `delete_content` — Delete scheduled content
-- `create_campaign` — Create content campaign
-- `add_to_campaign` — Add content to campaign
-- `get_campaign_content` — Get all content in campaign
-- `get_platform_schedule` — Get schedule overview by platform
-- `get_content_stats` — Get content statistics
+### `schedule_content`
+Schedule content for publishing
 
-## Links
+### `get_calendar`
+Get content calendar
 
-- Source: https://github.com/CSOAI-ORG/content-calendar-ai-mcp
-- PyPI: https://pypi.org/project/content-calendar-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `get_upcoming`
+Get upcoming content
+
+### `update_content`
+Update scheduled content
+
+### `delete_content`
+Delete scheduled content
+
+### `create_campaign`
+Create content campaign
+
+### `add_to_campaign`
+Add content to campaign
+
+### `get_campaign_content`
+Get all content in campaign
+
+### `get_platform_schedule`
+Get schedule overview by platform
+
+### `get_content_stats`
+Get content statistics
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

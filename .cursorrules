@@ -1,0 +1,9 @@
+# content-calendar-ai-mcp - Auto-trigger Rules
+
+When the user asks about content calendar, use content-calendar-ai-mcp tools: schedule_content, get_calendar, get_upcoming, update_content, delete_content
+
+**MCP server for content calendar ai mcp operations**
+
+Install: `pip install content-calendar-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

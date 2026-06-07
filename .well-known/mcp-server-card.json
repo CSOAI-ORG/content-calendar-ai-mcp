@@ -1,0 +1,43 @@
+{
+  "name": "content-calendar-ai-mcp",
+  "title": "Content Calendar Ai Mcp",
+  "description": "Content Calendar Ai automation via MCP. Includes schedule content, get calendar, get upcoming. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "schedule_content"
+    },
+    {
+      "name": "get_calendar"
+    },
+    {
+      "name": "get_upcoming"
+    },
+    {
+      "name": "update_content"
+    },
+    {
+      "name": "delete_content"
+    },
+    {
+      "name": "create_campaign"
+    },
+    {
+      "name": "add_to_campaign"
+    },
+    {
+      "name": "get_campaign_content"
+    },
+    {
+      "name": "get_platform_schedule"
+    },
+    {
+      "name": "get_content_stats"
+    }
+  ]
+}

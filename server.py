@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
 MEOK AI Labs — content-calendar-ai-mcp MCP Server. Content planning, scheduling, and calendar management."""
 
 import json
