@@ -1,0 +1,28 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "content-calendar-ai-mcp",
+    "description": "Content Calendar Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "content-calendar-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "schedule_content",
+      "get_calendar",
+      "get_upcoming",
+      "update_content",
+      "delete_content",
+      "create_campaign",
+      "add_to_campaign",
+      "get_campaign_content",
+      "get_platform_schedule",
+      "get_content_stats"
+    ]
+  }
+}

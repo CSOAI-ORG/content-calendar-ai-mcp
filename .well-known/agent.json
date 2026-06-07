@@ -1,0 +1,113 @@
+{
+  "name": "content-calendar-ai-mcp",
+  "description": "Content Calendar Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/content-calendar-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "schedule_content",
+      "name": "Schedule Content",
+      "description": "schedule_content via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_calendar",
+      "name": "Get Calendar",
+      "description": "get_calendar via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_upcoming",
+      "name": "Get Upcoming",
+      "description": "get_upcoming via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "update_content",
+      "name": "Update Content",
+      "description": "update_content via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "delete_content",
+      "name": "Delete Content",
+      "description": "delete_content via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "create_campaign",
+      "name": "Create Campaign",
+      "description": "create_campaign via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "add_to_campaign",
+      "name": "Add To Campaign",
+      "description": "add_to_campaign via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_campaign_content",
+      "name": "Get Campaign Content",
+      "description": "get_campaign_content via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_platform_schedule",
+      "name": "Get Platform Schedule",
+      "description": "get_platform_schedule via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_content_stats",
+      "name": "Get Content Stats",
+      "description": "get_content_stats via content-calendar-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
