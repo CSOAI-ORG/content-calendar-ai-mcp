@@ -1,4 +1,4 @@
-<!-- mcp-name: CSOAI-ORG/content-calendar-ai-mcp -->
+<!-- mcp-name: io.github.CSOAI-ORG/content-calendar-ai-mcp -->
 [![MCP Scorecard: 74/100](https://img.shields.io/badge/proofof.ai-74%2F100-5b21b6)](https://proofof.ai/scorecard/content-calendar-ai-mcp.html)
 
 # Content Calendar Ai MCP
@@ -113,3 +113,7 @@ Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographical
 
 <!-- BUY-LADDER:END -->
 
+## See also
+
+MEOK compliance MCP fleet:
+[`content-registry-mcp`](https://github.com/CSOAI-ORG/content-registry-mcp)
